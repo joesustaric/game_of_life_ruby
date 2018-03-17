@@ -27,9 +27,9 @@ class God
   def self.live_or_die(cell, neighbours)
     alive_neighbours = self.calculate_alive_neighbours(neighbours)
 
-    return DEAD_STATE[alive_neighbours] if cell.current_state == 'dead'
+    return ALIVE_STATE[alive_neighbours] if cell.alive?
 
-    return ALIVE_STATE[alive_neighbours]
+    return DEAD_STATE[alive_neighbours]
   end
 
   private
@@ -47,5 +47,9 @@ class Cell
 
   def initialize(state)
     @current_state = state
+  end
+
+  def alive?
+    current_state.downcase == 'alive'
   end
 end
