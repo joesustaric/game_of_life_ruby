@@ -1,4 +1,5 @@
 require 'god'
+require 'cell'
 
 describe God do
   describe '#live_or_die' do
@@ -6,7 +7,7 @@ describe God do
       let(:cell) { Cell.new('alive') }
 
       context 'When we have fewer than two live neighbours' do
-        let(:neighbours) { [ Cell.new('alive') ] }
+        let(:neighbours) { [Cell.new('alive')] }
 
         it 'dies' do
           expect(God.live_or_die(cell, neighbours)).to eq 'dead'
@@ -14,7 +15,7 @@ describe God do
       end
 
       context 'When we have exactly two live neighbours' do
-        let(:neighbours) { [ Cell.new('alive'), Cell.new('alive') ] }
+        let(:neighbours) { [Cell.new('alive'), Cell.new('alive')] }
 
         it 'lives' do
           expect(God.live_or_die(cell, neighbours)).to eq 'alive'
