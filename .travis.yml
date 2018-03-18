@@ -10,7 +10,7 @@ rvm:
 before_install:
   - gem update --system
   - gem --version
-  - gem isntall bundler
+  - gem install bundler
 
 script:
   - bundle exec rake rubocop
