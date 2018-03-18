@@ -1,7 +1,7 @@
 require 'cell'
-class God
 
-  ALIVE_STATE = {
+class God
+  ALIVE_NEXT_STATE = {
     0 => 'dead',
     1 => 'dead',
     2 => 'alive',
@@ -13,7 +13,7 @@ class God
     8 => 'dead'
   }.freeze
 
-  DEAD_STATE = {
+  DEAD_NEXT_STATE = {
     0 => 'dead',
     1 => 'dead',
     2 => 'dead',
