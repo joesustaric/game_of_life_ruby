@@ -12,5 +12,5 @@ before_install:
   - gem --version
   - gem install bundler
 
-# script:
-#   - bundle exec rake rubocop
+script:
+  - bundle exec rake spec
