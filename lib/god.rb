@@ -1,6 +1,8 @@
 require 'cell'
 
 class God
+  # Key = How many 'alive' neighbours
+  # Value = Next state, alive or dead
   ALIVE_NEXT_STATE = {
     0 => 'dead',
     1 => 'dead',
@@ -13,6 +15,8 @@ class God
     8 => 'dead'
   }.freeze
 
+  # Key = How many 'alive' neighbours
+  # Value = Next state, alive or dead
   DEAD_NEXT_STATE = {
     0 => 'dead',
     1 => 'dead',

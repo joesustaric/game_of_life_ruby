@@ -54,8 +54,7 @@ describe God do
       context 'When we have exactly three live neighbours' do
         let(:neighbours) do
           [
-            Cell.new('alive'), Cell.new('alive'),
-            Cell.new('alive'), Cell.new('dead')
+            Cell.new('alive'), Cell.new('alive'), Cell.new('alive')
           ]
         end
 
@@ -67,8 +66,7 @@ describe God do
       context 'When we have less than three live neighbours' do
         let(:neighbours) do
           [
-            Cell.new('alive'), Cell.new('alive'),
-            Cell.new('dead'), Cell.new('dead')
+            Cell.new('alive'), Cell.new('alive'), Cell.new('dead')
           ]
         end
 
