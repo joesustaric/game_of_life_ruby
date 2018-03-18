@@ -28,9 +28,9 @@ class God
   def self.live_or_die(cell, neighbours)
     alive_neighbours = self.calculate_alive_neighbours(neighbours)
 
-    return ALIVE_STATE[alive_neighbours] if cell.alive?
+    return ALIVE_NEXT_STATE[alive_neighbours] if cell.alive?
 
-    return DEAD_STATE[alive_neighbours]
+    return DEAD_NEXT_STATE[alive_neighbours]
   end
 
   private_class_method
